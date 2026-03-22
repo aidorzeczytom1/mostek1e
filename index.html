@@ -467,6 +467,57 @@
     .footer-tom-link.coming:hover { border-color: rgba(37,99,235,0.3); color: #93C5FD; }
     .footer-copy { font-size: 0.78rem; color: #475569; }
 
+    .footer-promo {
+      max-width: 700px;
+      margin: 0 auto 24px;
+      background: linear-gradient(135deg, rgba(37,99,235,0.13) 0%, rgba(129,140,248,0.10) 100%);
+      border: 1px solid rgba(129,140,248,0.35);
+      border-top: 3px solid var(--glow);
+      border-radius: 14px;
+      padding: 24px 28px;
+      text-align: left;
+    }
+
+    .footer-promo-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .footer-promo-text {
+      font-size: 0.93rem;
+      line-height: 1.7;
+      color: #CBD5E1;
+      margin-bottom: 16px;
+    }
+
+    .footer-promo-text strong {
+      color: var(--white);
+    }
+
+    .footer-promo-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 8px;
+      transition: background 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-promo-cta:hover {
+      background: #ea6c0a;
+      box-shadow: 0 0 20px rgba(249,115,22,0.4);
+    }
+
     /* ── MOBILE ── */
     @media (max-width: 540px) {
       header { padding: 40px 16px 32px; }
@@ -811,6 +862,13 @@ My recent achievements: [List briefly, e.g. delivered a major project solo / too
     <a class="footer-tom-link current" href="#">★ Book 1 — you are here</a>
     <a class="footer-tom-link coming" href="https://book2.aidorzeczy.com">Book 2 — Organisation &amp; Planning</a>
     <a class="footer-tom-link coming" href="https://book3.aidorzeczy.com">Book 3 — Household Budget</a>
+  </div>
+  <div class="footer-promo">
+    <div class="footer-promo-heading">✨ Ready to go further?</div>
+    <div class="footer-promo-text">
+      <strong>Book 2 — Organisation &amp; Planning</strong> and <strong>Book 3 — Household Budget</strong> are waiting for you on Amazon. Inside each ebook you'll find a unique access code that unlocks the full companion page — with all the ready-to-use prompts.
+    </div>
+    <a class="footer-promo-cta" href="https://ebooks.aidorzeczy.com">Find the Amazon links →</a>
   </div>
   <p class="footer-copy">AI Made Simple · Leszek Ignatowicz · book1.aidorzeczy.com</p>
 </footer>
