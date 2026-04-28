@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0029)https://book1.aidorzeczy.com/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Made Simple · Book 1 · Ready-to-Copy Prompts</title>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link href="./AI Made Simple · Book 1 · Ready-to-Copy Prompts_files/css2" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -102,10 +101,10 @@
       opacity: 0.85;
     }
 
-   header h1 {
+    header h1 {
       font-family: 'Outfit', Arial, sans-serif;
-      font-size: clamp(1rem, 2.5vw, 1.5rem);
-      font-weight: 700;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 800;
       line-height: 1.3;
       margin-bottom: 10px;
     }
@@ -116,7 +115,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      transform: translateZ(0); /* Wymuszenie sprzętowe - twardy fix dla starych iPhone'ów */
+      transform: translateZ(0); 
     }
 
     .header-tagline {
@@ -299,7 +298,7 @@
 
     .komenda-head {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       padding: 14px 18px 10px;
       gap: 12px;
@@ -307,7 +306,7 @@
 
     .komenda-label {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
       flex: 1;
       min-width: 0;
@@ -324,15 +323,14 @@
       padding: 2px 8px;
       flex-shrink: 0;
       letter-spacing: 0.05em;
+      margin-top: 1px;
     }
 
     .komenda-title {
       font-size: 0.93rem;
       font-weight: 600;
       color: var(--white);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      line-height: 1.4;
     }
 
     .komenda-body {
@@ -352,7 +350,6 @@
       font-family: 'DM Sans', sans-serif;
     }
 
-    /* placeholder fields highlighting */
     .komenda-tekst .placeholder {
       color: #93C5FD;
       font-style: italic;
@@ -789,7 +786,10 @@
   <div class="header-glow"></div>
   <div class="dominate-headline">DON’T FEAR AI: DOMINATE YOUR FUTURE</div>
   <div class="header-series">AI Made Simple</div>
-  <h1>Book 1: Communication &amp; Difficult Emails.<br>How to stop dreading your inbox.</h1>
+  <h1>
+    <span>Book 1: Communication &amp; Difficult Emails.</span>
+    <span>How to stop dreading your inbox.</span>
+  </h1>
   <div class="header-tagline">How to say no assertively and save hours of stress — no tech knowledge required.</div>
   <div class="header-subtitle-small">A plain-English guide for everyone. · Leszek Ignatowicz · book1.aidorzeczy.com</div>
   <div class="header-tip">
@@ -816,7 +816,6 @@
     <span class="progress-count" id="progressCount">0 / 8</span>
   </div>
 
-  <!-- ═══ CHAPTER 1 ═══ -->
   <section class="chapter" id="r1">
     <div class="chapter-header">
       <div class="chapter-icon">✋</div>
@@ -853,7 +852,6 @@ Please end the email with a warm, friendly sign-off.</div>
     </div>
   </section>
 
-  <!-- ═══ CHAPTER 2 ═══ -->
   <section class="chapter" id="r2">
     <div class="chapter-header">
       <div class="chapter-icon">⚖️</div>
@@ -893,7 +891,6 @@ End the letter formally, request a positive resolution, and state that I expect 
     </div>
   </section>
 
-  <!-- ═══ CHAPTER 3 ═══ -->
   <section class="chapter" id="r3">
     <div class="chapter-header">
       <div class="chapter-icon">🔍</div>
@@ -933,7 +930,6 @@ Here is the text: [Paste the full letter or email here]</div>
     </div>
   </section>
 
-  <!-- ═══ CHAPTER 4 ═══ -->
   <section class="chapter" id="r4">
     <div class="chapter-header">
       <div class="chapter-icon">🔒</div>
@@ -968,7 +964,6 @@ Here are my notes: [Brief description of the situation and why you need your man
     </div>
   </section>
 
-  <!-- ═══ CHEAT SHEET ═══ -->
   <section class="chapter" id="cheatsheet">
     <div class="chapter-header">
       <div class="chapter-icon">📌</div>
@@ -986,7 +981,6 @@ Here are my notes: [Brief description of the situation and why you need your man
     </div>
   </section>
 
-  <!-- ═══ ADVANCED ═══ -->
   <section class="chapter" id="advanced">
     <div class="chapter-header">
       <div class="chapter-icon">🚀</div>
@@ -1033,259 +1027,4 @@ The message should be warm and respectful, but 100% clear that this particular r
       <div class="komenda-body">
         <div class="komenda-tekst" id="k6">Act as a tough, relentless consumer rights lawyer.
 
-The shop has just rejected my complaint without proper grounds.
-
-Write a formal appeal letter on my behalf.
-
-Tone: very firm, cold, and clear that I will not drop this.
-
-Product: [What you complained about]
-The shop's excuse: [What they said, e.g. "mechanical damage caused by user"]
-My counter-argument: [e.g. used exactly as instructed; fault appeared after one month]
-My demand: [Replacement / refund — state clearly you're maintaining your original request]
-
-End the letter with a firm statement that if this appeal is ignored, I will escalate the matter to the relevant consumer protection authority.</div>
-        <div class="komenda-actions">
-          <button class="btn-kopiuj" onclick="kopiuj(&#39;k6&#39;, this)">📋 Copy prompt</button>
-          <span class="copy-hint">Ctrl+V or long-press → Paste</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="komenda-card">
-      <div class="komenda-head">
-        <div class="komenda-label">
-          <span class="komenda-num">No. 7</span>
-          <span class="komenda-title">Understand the jargon and reply in one go</span>
-        </div>
-      </div>
-      <div class="komenda-body">
-        <div class="komenda-tekst" id="k7">Act as a helpful, knowledgeable civil servant.
-
-Below is a complicated official letter I have just received.
-
-Please do two things:
-
-Step 1: Explain in 2 plain sentences what they want from me.
-
-Step 2: Write a formal, official reply to this authority on my behalf.
-
-My response (what I want to tell them): [e.g. I'm attaching the missing documents / I paid this amount two days ago, confirmation attached / I disagree with this decision]
-
-Here is the letter I received: [Paste the content here — remember to remove personal details like your ID number or bank account first]</div>
-        <div class="komenda-actions">
-          <button class="btn-kopiuj" onclick="kopiuj(&#39;k7&#39;, this)">📋 Copy prompt</button>
-          <span class="copy-hint">Ctrl+V or long-press → Paste</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="komenda-card">
-      <div class="komenda-head">
-        <div class="komenda-label">
-          <span class="komenda-num">No. 8</span>
-          <span class="komenda-title">Negotiating a pay rise — safely</span>
-        </div>
-      </div>
-      <div class="komenda-body">
-        <div class="komenda-tekst" id="k8">Act as a top career coach.
-
-Help me write an email to my manager requesting a meeting to discuss a pay rise.
-
-The message must sound professional and be grounded in my recent achievements — but absolutely not arrogant.
-
-To protect my privacy, I am not sharing any real figures.
-
-Wherever a salary figure should appear, use these exact placeholders: [Current Salary] and [Target Salary].
-
-I will replace them with real numbers on my own device before sending.
-
-My recent achievements: [List briefly, e.g. delivered a major project solo / took on responsibilities from a departing colleague / improved team turnaround time]</div>
-        <div class="komenda-actions">
-          <button class="btn-kopiuj" onclick="kopiuj(&#39;k8&#39;, this)">📋 Copy prompt</button>
-          <span class="copy-hint">Ctrl+V or long-press → Paste</span>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-</main>
-
-<!-- ══ NEWSLETTER & REVIEW ══════════════════════════════════════════════ -->
-<div class="bonus-section">
-
-  <div class="bonus-card">
-    <div class="bonus-card-header">
-      <div class="bonus-card-icon">✉️</div>
-      <h3>Join the AI community and get your bonuses</h3>
-    </div>
-    <p>Sign up for my free newsletter to receive updates on new prompts, AI tool news, and upcoming books in the series.</p>
-    <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin:22px 0 14px;flex-wrap:wrap;">
-      <span style="font-size:2.2rem;animation:pointRight 1.2s ease-in-out infinite;display:inline-block;">&#x1F449;</span>
-      <a href="https://ebooks.aidorzeczy.com/#community" target="_blank" rel="noopener"
-         style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;background:#2563eb;color:#fff;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;padding:14px 28px;border-radius:9px;box-shadow:0 4px 20px rgba(37,99,235,0.4);">
-        Sign me up →
-      </a>
-    </div>
-    <style>@keyframes pointRight{0%,100%{transform:translateX(0)}50%{transform:translateX(9px)}}</style>
-    <p style="margin-top:4px;margin-bottom:0;"><small>No spam. Unsubscribe at any time.</small></p>
-    <p style="margin-top:10px;margin-bottom:0;font-size:0.75rem;color:#475569;line-height:1.6;">By signing up, you agree to receive my newsletter and the free bonus. We process your email via Mailchimp to deliver this content. You can unsubscribe at any time. See our <a href="https://privacy.aidorzeczy.com" target="_blank" rel="noopener" style="color:#94A3B8;text-decoration:underline;">Privacy Policy</a> for details.</p>
-  </div>
-  <div class="review-card">
-    <h3>Did my prompts make your life easier?</h3>
-    <p>Your opinion is the fuel for this series. If the knowledge in my ebooks saved you time, <span class="highlight">leaving a short, honest review on Amazon takes 30 seconds</span> — and helps me reach more people.</p>
-    <div class="review-buttons">
-      <a class="btn-review" href="https://ebooks.aidorzeczy.com/#book-1-3" target="_blank" rel="noopener">⭐ Review Book 1</a>
-      <a class="btn-review" href="https://ebooks.aidorzeczy.com/#book-1-3" target="_blank" rel="noopener">⭐ Review Book 2</a>
-      <a class="btn-review" href="https://ebooks.aidorzeczy.com/#book-1-3" target="_blank" rel="noopener">⭐ Review Book 3</a>
-      <a class="btn-review" href="https://ebooks.aidorzeczy.com/#book-4-6" target="_blank" rel="noopener">⭐ Review Book 4</a>
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  <div class="footer-tomy">
-    <a class="footer-tom-link current" href="https://book1.aidorzeczy.com/#">★ Book 1 — you are here</a>
-    <a class="footer-tom-link coming" href="https://book2.aidorzeczy.com/">Book 2 — Organisation &amp; Planning</a>
-    <a class="footer-tom-link coming" href="https://book3.aidorzeczy.com/">Book 3 — Household Budget</a>
-    <a class="footer-tom-link coming" href="https://book4.aidorzeczy.com/">Book 4 — Movies &amp; What to Watch</a>
-  </div>
-  <div class="footer-promo">
-    <div class="footer-promo-heading">🚀 Ready to Dominate Your Future?</div>
-    <div class="footer-promo-text">
-      You've seen what one book can do. <strong>Books 2 and 3 take you from beginner to professional AI master.</strong>
-    </div>
-    <ul class="footer-promo-bullets">
-      <li>⚡ Master advanced automation and delegate tedious work forever</li>
-      <li>📉 Reduce your daily workload by up to 80% with proven AI commands</li>
-      <li>🗂️ Unlock the full companion pages for budget, travel and complex planning</li>
-      <li>✅ No coding, no technical barrier — just copy, paste, and win</li>
-    </ul>
-    <div class="footer-promo-emotion">
-      The manual workload is a cage. Imagine finishing everything by 3 PM — and being the person in your field who has already figured it all out.
-    </div>
-    <div class="footer-promo-books">
-      <div class="footer-promo-book">
-        <span class="footer-promo-book-num">2</span>
-        <div>
-          <strong>Organisation &amp; Planning</strong>
-          <span>Meal plans · schedules · travel · to-do reset</span>
-        </div>
-      </div>
-      <div class="footer-promo-book">
-        <span class="footer-promo-book-num">3</span>
-        <div>
-          <strong>Household Budget &amp; Money</strong>
-          <span>Track spending · find savings · compare deals</span>
-        </div>
-      </div>
-      <div class="footer-promo-book">
-        <span class="footer-promo-book-num">4</span>
-        <div>
-          <strong>Movies &amp; What to Watch</strong>
-          <span>Perfect picks for every mood and group</span>
-        </div>
-      </div>
-    </div>
-    <a class="footer-promo-cta" href="https://ebooks.aidorzeczy.com/#books" target="_blank" rel="noopener">Get Books 2, 3 &amp; 4 on Amazon →</a>
-  </div>
-  <p class="footer-copy">Don’t Fear AI · Leszek Ignatowicz · book1.aidorzeczy.com</p>
-  <p class="footer-copy" style="margin-top:8px;">
-    <a href="https://privacy.aidorzeczy.com" target="_blank" rel="noopener" style="color:#475569;text-decoration:underline;">Privacy Policy</a>
-    &nbsp;&middot;&nbsp;
-    <a href="https://ebooks.aidorzeczy.com/" target="_blank" rel="noopener" style="color:#475569;text-decoration:underline;">ebooks.aidorzeczy.com</a>
-  </p>
-  <p class="amazon-disclaimer">This page is a free, optional companion to <em>AI Made Simple — Book 1</em> (available on Amazon), provided solely to make copying prompts more convenient. All prompts shown here are also available in full text inside the purchased e-book.</p>
-</footer>
-
-<script>
-  const TOTAL = 8;
-  const copied = new Set();
-
-  function updateProgress() {
-    const n = copied.size;
-    document.getElementById('progressCount').textContent = n + ' / ' + TOTAL;
-    document.getElementById('progressFill').style.width = (n / TOTAL * 100) + '%';
-  }
-
-  function kopiuj(id, btn) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const tekst = el.innerText;
-
-    const resetBtn = () => {
-      btn.textContent = '📋 Copy prompt';
-      btn.classList.remove('success', 'error');
-    };
-
-    if (!navigator.clipboard) {
-      try {
-        const ta = document.createElement('textarea');
-        ta.value = tekst;
-        ta.style.position = 'fixed';
-        ta.style.opacity = '0';
-        document.body.appendChild(ta);
-        ta.focus();
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        btn.textContent = '✓ Copied!';
-        btn.classList.add('success');
-        copied.add(id);
-        updateProgress();
-        setTimeout(resetBtn, 2500);
-      } catch {
-        btn.textContent = '⚠ Error — copy manually';
-        btn.classList.add('error');
-        setTimeout(resetBtn, 3500);
-      }
-      return;
-    }
-
-    navigator.clipboard.writeText(tekst)
-      .then(() => {
-        btn.textContent = '✓ Copied!';
-        btn.classList.add('success');
-        copied.add(id);
-        updateProgress();
-        setTimeout(resetBtn, 2500);
-      })
-      .catch(() => {
-        btn.textContent = '⚠ Copy failed';
-        btn.classList.add('error');
-        setTimeout(resetBtn, 3000);
-      });
-  }
-
-  function setActive(el) {
-    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-    el.classList.add('active');
-  }
-
-  const sections = document.querySelectorAll('.chapter');
-  const navItems = document.querySelectorAll('.nav-item');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navItems.forEach(n => {
-          n.classList.toggle('active', n.getAttribute('href') === '#' + id);
-        });
-      }
-    });
-  }, { rootMargin: '-40% 0px -50% 0px' });
-
-  sections.forEach(s => observer.observe(s));
-
-  // Italicise [placeholder] text inside every prompt block
-  document.querySelectorAll('.komenda-tekst').forEach(function(el) {
-    el.innerHTML = el.innerHTML.replace(/(\[[^\]]*\])/g, '<em style="color:#93C5FD;font-style:italic;">$1</em>');
-  });
-</script>
-
-
-
-</body></html>
+The
