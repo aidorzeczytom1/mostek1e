@@ -779,45 +779,100 @@
       color: var(--muted);
     }
 
-  <!-- MailerLite embed CSS -->
-  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1777551");</style>
-  <style type="text/css">
-    .ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px;}
-    .ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#ffffff #ffffff #ffffff transparent;animation:ml-form-embedSubmitLoad 1.2s linear infinite;}
-    @keyframes ml-form-embedSubmitLoad{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
-    #mlb2-40553386.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important;}
-    #mlb2-40553386.ml-form-embedContainer h4,#mlb2-40553386.ml-form-embedContainer p,#mlb2-40553386.ml-form-embedContainer span,#mlb2-40553386.ml-form-embedContainer button{text-transform:none!important;letter-spacing:normal!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper{border-width:0;border-radius:4px;border-style:solid;box-sizing:border-box;display:inline-block!important;margin:0;padding:0;position:relative;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper.embedForm{max-width:100%;width:100%;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:20px 20px 0 20px;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,#mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent{text-align:left;margin:0 0 20px 0;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent{margin:0 0 20px 0;width:100%;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{margin:0 0 10px 0;width:100%;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item{margin:0;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input{border-radius:4px!important;border-style:solid!important;border-width:1px!important;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px!important;height:auto;line-height:21px!important;margin:0;padding:10px!important;width:100%!important;box-sizing:border-box!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit{margin:0 0 20px 0;float:left;width:100%;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{border:none!important;border-radius:8px!important;box-shadow:none!important;cursor:pointer;font-family:'DM Sans',sans-serif!important;font-size:14px!important;font-weight:700!important;line-height:21px!important;height:auto;padding:10px!important;width:100%!important;box-sizing:border-box!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading{display:none;}
-    .ml-error input,.ml-error textarea{border-color:red!important;}
-    .ml-error .label-description,.ml-error label:first-child{color:#ff0000!important;}
+    /* ── HAMBURGER NAV ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px 16px;
+      flex-shrink: 0;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--muted);
+      border-radius: 2px;
+      transition: all 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: var(--orange); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: var(--orange); }
 
-    /* ── DARK THEME OVERRIDES ── */
-    #mlb2-40553386.ml-form-embedContainer .ml-form-align-center{text-align:left;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper{background-color:transparent!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:0!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4{color:#F1F5F9!important;font-family:'Outfit',sans-serif!important;font-size:1.15rem!important;font-weight:700!important;margin:0 0 8px 0!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p,
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p strong{color:#CBD5E1!important;font-family:'DM Sans',sans-serif!important;font-size:0.9rem!important;line-height:1.7!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label{color:#93C5FD!important;font-family:'DM Sans',sans-serif!important;font-size:0.82rem!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input{background-color:#0A1526!important;color:#F1F5F9!important;border-color:#1E3050!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder{color:#475569!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder{color:#475569!important;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#2563EB!important;transition:background 0.15s,box-shadow 0.15s;}
-    #mlb2-40553386.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover{background-color:#3B82F6!important;box-shadow:0 0 16px rgba(37,99,235,0.4)!important;}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+      gap: 4px;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+
+    @media (max-width: 640px) {
+      .chapter-nav {
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: flex-start;
+      }
+      .nav-hamburger {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        padding: 12px 20px;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 4px 0 12px;
+        gap: 0;
+        overflow-x: visible;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .nav-links .nav-item {
+        padding: 12px 24px;
+        border-bottom: none;
+        border-left: 2px solid transparent;
+        font-size: 0.9rem;
+        white-space: normal;
+      }
+      .nav-links .nav-item.active {
+        border-left-color: var(--orange);
+        border-bottom-color: transparent;
+        color: var(--orange);
+      }
+      .nav-sep { display: none; }
+    }
+
+    /* ── HUB NEWSLETTER BTN ── */
+    .btn-newsletter-hub {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 11px 26px;
+      border-radius: 8px;
+      transition: background 0.15s, box-shadow 0.15s;
+      letter-spacing: 0.02em;
+    }
+    .btn-newsletter-hub:hover {
+      background: var(--blue-light);
+      box-shadow: 0 0 16px rgba(37,99,235,0.4);
+    }
+
   </style>
 </head>
 <body>
@@ -839,13 +894,18 @@
 </header>
 
 <nav class="chapter-nav" id="chapNav">
-  <a class="nav-item active" href="https://book1.aidorzeczy.com/#r1" onclick="setActive(this)">Ch. 1 — Saying No</a>
-  <a class="nav-item" href="https://book1.aidorzeczy.com/#r2" onclick="setActive(this)">Ch. 2 — Complaints</a>
-  <a class="nav-item" href="https://book1.aidorzeczy.com/#r3" onclick="setActive(this)">Ch. 3 — Jargon</a>
-  <a class="nav-item" href="https://book1.aidorzeczy.com/#r4" onclick="setActive(this)">Ch. 4 — Privacy</a>
-  <div class="nav-sep"></div>
-  <a class="nav-item" href="https://book1.aidorzeczy.com/#cheatsheet" onclick="setActive(this)">Cheat Sheet</a>
-  <a class="nav-item" href="https://book1.aidorzeczy.com/#advanced" onclick="setActive(this)">Advanced</a>
+  <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a class="nav-item active" href="#r1" onclick="setActive(this);closeNav()">Ch. 1 — Saying No</a>
+    <a class="nav-item" href="#r2" onclick="setActive(this);closeNav()">Ch. 2 — Complaints</a>
+    <a class="nav-item" href="#r3" onclick="setActive(this);closeNav()">Ch. 3 — Jargon</a>
+    <a class="nav-item" href="#r4" onclick="setActive(this);closeNav()">Ch. 4 — Privacy</a>
+    <div class="nav-sep"></div>
+    <a class="nav-item" href="#cheatsheet" onclick="setActive(this);closeNav()">Cheat Sheet</a>
+    <a class="nav-item" href="#advanced" onclick="setActive(this);closeNav()">Advanced</a>
+  </div>
 </nav>
 
 <main>
@@ -1154,67 +1214,28 @@ took on responsibilities from a departing colleague / improved team turnaround t
 <div class="bonus-section">
 
   <div class="bonus-card">
-    <div id="mlb2-40553386" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-40553386">
-      <div class="ml-form-align-center">
-        <div class="ml-form-embedWrapper embedForm">
-
-          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-            <div class="ml-form-embedContent">
-              <h4>Don't Fear AI Newsletter</h4>
-              <p>Get practical, easy-to-follow AI tips and exclusive discounts on my newest guides.<br><small style="color:#475569;font-size:0.78rem;">No spam. One email per new release. Unsubscribe any time.</small></p>
-            </div>
-
-            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2291506/forms/186025792504858270/subscribe" data-code="" method="post" target="_blank">
-              <div class="ml-form-formContent">
-                <div class="ml-form-fieldRow">
-                  <div class="ml-field-group ml-field-name ml-validate-required">
-                    <label>First name</label>
-                    <input aria-label="name" aria-required="true" type="text" class="form-control" name="fields[name]" placeholder="" autocomplete="given-name">
-                  </div>
-                </div>
-                <div class="ml-form-fieldRow ml-last-item">
-                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                    <label>Email</label>
-                    <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="" autocomplete="email">
-                  </div>
-                </div>
-              </div>
-
-              <input type="hidden" name="ml-submit" value="1">
-              <div class="ml-form-embedSubmit">
-                <button type="submit" class="primary">Yes, send me updates! 🚀</button>
-                <button disabled="disabled" style="display:none;" type="button" class="loading">
-                  <div class="ml-form-embedSubmitLoad"></div>
-                  <span class="sr-only">Loading...</span>
-                </button>
-              </div>
-              <input type="hidden" name="anticsrf" value="true">
-            </form>
-          </div>
-
-          <div class="ml-form-successBody row-success" style="display:none;">
-            <div class="ml-form-successContent">
-              <h4>Almost there! ✅</h4>
-              <p><strong>Please check your inbox and click the confirmation link. (Check spam/promotions just in case!)</strong></p>
-            </div>
-          </div>
-
-        </div>
-      </div>
+    <div class="bonus-card-header">
+      <div class="bonus-card-icon">✉️</div>
+      <h3>Join the AI community &amp; get your bonuses</h3>
+    </div>
+    <p>
+      Get practical AI tips, updates on new books, and exclusive discounts — straight to your inbox.<br>
+      <small>No spam. Unsubscribe at any time.</small>
+    </p>
+    <div style="text-align:center;margin-top:4px;">
+      <a class="btn-newsletter-hub" href="https://newsletter.aidorzeczy.com/" target="_blank" rel="noopener noreferrer">
+        👉 Sign me up &rarr;
+      </a>
     </div>
   </div>
 
   <div class="review-card">
-    <h3>⭐ Enjoying the book? Leave a quick review</h3>
+    <h3>📚 More books in the series</h3>
     <p>
-      Even one sentence or a star rating helps others discover these AI techniques —
-      and it takes less than <span class="highlight">60 seconds</span>.
+      Organisation, budgeting, movies, parenting, gifts and more — find the full series, buy links, and one-click review links at:
     </p>
     <div class="review-buttons">
-      <a class="btn-review" href="https://ebooks.aidorzeczy.com" target="_blank" rel="noopener">⭐ Leave a review on Amazon</a>
-    </div>
-    <div class="amazon-disclaimer">
-      Direct review links are available at <strong>ebooks.aidorzeczy.com</strong> — one click takes you straight to the right Amazon page for your country.
+      <a class="btn-review" href="https://ebooks.aidorzeczy.com" target="_blank" rel="noopener">🌐 ebooks.aidorzeczy.com</a>
     </div>
   </div>
 
@@ -1229,18 +1250,6 @@ took on responsibilities from a departing colleague / improved team turnaround t
   </div>
   <p class="footer-copy">© 2026 Leszek Ignatowicz · <a href="https://ebooks.aidorzeczy.com" style="color:#475569;">ebooks.aidorzeczy.com</a> · All rights reserved.</p>
 </footer>
-
-<script>
-  function ml_webform_success_40553386() {
-    var $ = ml_jQuery || jQuery;
-    $('.ml-subscribe-form-40553386 .row-success').show();
-    $('.ml-subscribe-form-40553386 .row-form').hide();
-  }
-</script>
-<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
-<script>
-  fetch("https://assets.mailerlite.com/jsonp/2291506/forms/186025792504858270/takel");
-</script>
 
 <script>
   /* ── COPY PROMPT ── */
@@ -1275,6 +1284,20 @@ took on responsibilities from a departing colleague / improved team turnaround t
     const n = copied.size;
     document.getElementById('progressCount').textContent = n + ' / ' + TOTAL;
     document.getElementById('progressFill').style.width = (n / TOTAL * 100) + '%';
+  }
+
+  /* ── HAMBURGER NAV ── */
+  function toggleNav() {
+    const btn = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    btn.classList.toggle('open');
+    links.classList.toggle('open');
+  }
+  function closeNav() {
+    const btn = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    btn.classList.remove('open');
+    links.classList.remove('open');
   }
 
   /* ── STICKY NAV ACTIVE ── */
