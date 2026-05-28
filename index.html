@@ -857,20 +857,133 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--blue);
+      background: var(--orange);
       color: #fff;
       text-decoration: none;
       font-family: 'Outfit', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       font-weight: 700;
-      padding: 11px 26px;
+      padding: 13px 28px;
       border-radius: 8px;
-      transition: background 0.15s, box-shadow 0.15s;
+      transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
       letter-spacing: 0.02em;
+      box-shadow: 0 4px 18px rgba(249,115,22,0.35);
     }
     .btn-newsletter-hub:hover {
-      background: var(--blue-light);
-      box-shadow: 0 0 16px rgba(37,99,235,0.4);
+      background: var(--orange-dim);
+      box-shadow: 0 8px 26px rgba(249,115,22,0.5);
+      transform: translateY(-2px);
+    }
+
+    /* ── NEWSLETTER v3.0 ELEMENTS ── */
+    .bonus-card-lead {
+      font-size: 0.95rem !important;
+      color: #CBD5E1 !important;
+      line-height: 1.7 !important;
+      margin-bottom: 18px !important;
+    }
+    .bonus-card-lead strong { color: var(--white); }
+    .bonus-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 22px;
+    }
+    .bonus-bullets li {
+      position: relative;
+      padding: 5px 0 5px 26px;
+      color: #CBD5E1;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .bonus-bullets li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      color: var(--orange);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+    .bonus-bullets li strong { color: var(--white); }
+    .bonus-bullets .bullet-meta { color: var(--muted); font-size: 0.82rem; font-style: italic; }
+    .bonus-social-proof {
+      margin: 18px 0 6px !important;
+      font-size: 0.85rem !important;
+      color: var(--muted) !important;
+      line-height: 1.6 !important;
+    }
+    .bonus-card-fineprint { margin-top: 6px !important; }
+    .bonus-card-fineprint small { color: #475569; font-size: 0.78rem; }
+
+    /* ── FLOATING NEWSLETTER BAR ── */
+    .float-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 950;
+      background: linear-gradient(90deg, var(--navy-inner) 0%, var(--navy-card) 50%, var(--navy-inner) 100%);
+      border-top: 2px solid var(--orange);
+      padding: 12px 20px;
+      box-shadow: 0 -8px 32px rgba(0,0,0,0.55);
+      transform: translateY(100%);
+      transition: transform 0.4s ease-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .float-bar.visible { transform: translateY(0); }
+    .float-bar-text {
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      line-height: 1.4;
+      margin: 0;
+      text-align: center;
+    }
+    .float-bar-text strong { color: var(--orange); font-weight: 700; }
+    .float-bar-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(249,115,22,0.4);
+      white-space: nowrap;
+    }
+    .float-bar-cta:hover {
+      background: var(--orange-dim);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(249,115,22,0.55);
+    }
+    .float-bar-close {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 4px 8px;
+      transition: color 0.2s;
+    }
+    .float-bar-close:hover { color: var(--orange); }
+    @media (max-width: 600px) {
+      .float-bar { padding: 10px 14px 12px; gap: 10px; }
+      .float-bar-text { font-size: 0.82rem; }
+      .float-bar-cta { font-size: 0.85rem; padding: 9px 16px; }
     }
 
   </style>
@@ -1214,17 +1327,24 @@ took on responsibilities from a departing colleague / improved team turnaround t
   <div class="bonus-card">
     <div class="bonus-card-header">
       <div class="bonus-card-icon">✉️</div>
-      <h3>Join the AI community &amp; get your bonuses</h3>
+      <h3>Turn AI into your execution engine</h3>
     </div>
-    <p>
-      Get practical AI tips, updates on new books, and exclusive discounts — straight to your inbox.<br>
-      <small>No spam. Unsubscribe at any time.</small>
+    <p class="bonus-card-lead">
+      AI isn&rsquo;t a thinking partner — it&rsquo;s a system that <strong>executes when you direct it right</strong>. Get the free PDF with the exact workflow for daily writing, planning, and summarising — in under 10 minutes.
     </p>
+    <ul class="bonus-bullets">
+      <li>2&ndash;3 short, practical emails a month <span class="bullet-meta">(under 2 minutes each)</span></li>
+      <li>Workflows you can use the same day</li>
+      <li>Heads-up when new books or tools drop</li>
+      <li>No spam, no hype, no <strong>$997 courses</strong></li>
+    </ul>
     <div style="text-align:center;margin-top:4px;">
-      <a class="btn-newsletter-hub" href="https://newsletter.aidorzeczy.com/" target="_blank" rel="noopener noreferrer">
-        👉 Sign me up &rarr;
+      <a class="btn-newsletter-hub" href="https://dont-fear-ai.subscribepage.io/" target="_blank" rel="noopener noreferrer">
+        &rarr; Show me the 10-minute workflow
       </a>
     </div>
+    <p class="bonus-social-proof"><em>Written by Leszek Ignatowicz — author of 4 books in the Don&rsquo;t Fear AI series.</em></p>
+    <p class="bonus-card-fineprint"><small>No spam. Unsubscribe anytime. No hard feelings.</small></p>
   </div>
 
   <div class="review-card">
@@ -1320,7 +1440,49 @@ took on responsibilities from a departing colleague / improved team turnaround t
   }, { rootMargin: '-30% 0px -60% 0px' });
 
   sections.forEach(s => observer.observe(s));
+
+  /* ── FLOATING NEWSLETTER BAR ──
+     Appears after the user scrolls past the header. Closable; the
+     dismissal is remembered for the current browser session only. */
+  (function() {
+    var floatBar = document.getElementById('floatBar');
+    var floatBarClose = document.getElementById('floatBarClose');
+    var headerEl = document.querySelector('header');
+    var dismissed = false;
+    try { dismissed = sessionStorage.getItem('ams_floatBar_dismissed') === '1'; } catch (e) {}
+
+    if (floatBar && headerEl && !dismissed) {
+      var lastShown = false;
+      var check = function() {
+        var show = headerEl.getBoundingClientRect().bottom < 0;
+        if (show !== lastShown) {
+          floatBar.classList.toggle('visible', show);
+          lastShown = show;
+        }
+      };
+      window.addEventListener('scroll', check, { passive: true });
+      window.addEventListener('resize', check, { passive: true });
+      check();
+    }
+    if (floatBarClose && floatBar) {
+      floatBarClose.addEventListener('click', function() {
+        floatBar.classList.remove('visible');
+        try { sessionStorage.setItem('ams_floatBar_dismissed', '1'); } catch (e) {}
+      });
+    }
+  })();
 </script>
+
+<!-- ══ FLOATING NEWSLETTER BAR ══ -->
+<aside class="float-bar" id="floatBar" role="complementary" aria-label="Newsletter signup">
+  <button class="float-bar-close" id="floatBarClose" aria-label="Close newsletter bar">×</button>
+  <p class="float-bar-text">
+    <strong>Free PDF:</strong> the 10-minute AI workflow for daily writing, planning &amp; summarising.
+  </p>
+  <a href="https://dont-fear-ai.subscribepage.io/" target="_blank" rel="noopener noreferrer" class="float-bar-cta">
+    Get it free &rarr;
+  </a>
+</aside>
 
 </body>
 </html>
